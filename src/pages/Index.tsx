@@ -51,7 +51,7 @@ const Index = () => {
               {
                 title: 'Promotional Products',
                 desc: 'Wide selection of customizable promotional items and corporate gifts',
-                image: 'https://images.unsplash.com/photo-1606293927179-11577bc2b9d5?auto=format&fit=crop&q=80'
+                image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80'
               },
               {
                 title: 'Signs & Graphics',
