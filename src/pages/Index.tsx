@@ -20,13 +20,18 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-fp-blue text-white py-20">
+      <section className="bg-fp-blue text-white py-20" 
+               style={{
+                 backgroundImage: 'linear-gradient(rgba(4, 97, 170, 0.9), rgba(4, 97, 170, 0.9)), url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80")',
+                 backgroundSize: 'cover',
+                 backgroundPosition: 'center'
+               }}>
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Your Brand Marketing Partner</h1>
             <p className="text-xl mb-8">Full-service marketing solutions including branded products, promotional items, embroidery, screen printing, signs & banners, and digital marketing services</p>
             <Button className="bg-white text-fp-blue hover:bg-fp-gray text-lg px-8 py-6">
-              Find a Location
+              Find a Location Near You
             </Button>
           </div>
         </div>
@@ -40,23 +45,32 @@ const Index = () => {
             {[
               {
                 title: 'Branded Apparel',
-                desc: 'Custom embroidery, screen printing, and branded clothing solutions'
+                desc: 'Custom embroidery, screen printing, and branded clothing solutions',
+                image: 'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&q=80'
               },
               {
                 title: 'Promotional Products',
-                desc: 'Wide selection of customizable promotional items and corporate gifts'
+                desc: 'Wide selection of customizable promotional items and corporate gifts',
+                image: 'https://images.unsplash.com/photo-1606293927179-11577bc2b9d5?auto=format&fit=crop&q=80'
               },
               {
                 title: 'Signs & Graphics',
-                desc: 'Custom banners, business signs, vehicle wraps, and display solutions'
+                desc: 'Custom banners, business signs, vehicle wraps, and display solutions',
+                image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80'
               }
             ].map((item) => (
               <div key={item.title} className="bg-white rounded-lg shadow-md p-6 text-center">
-                <div className="h-40 bg-fp-gray rounded-md mb-4"></div>
+                <div className="h-40 bg-fp-gray rounded-md mb-4 overflow-hidden">
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                 <p className="text-gray-600 mb-4">{item.desc}</p>
                 <Button variant="outline" className="text-fp-blue border-fp-blue hover:bg-fp-blue hover:text-white">
-                  Learn More
+                  View {item.title}
                 </Button>
               </div>
             ))}
@@ -72,23 +86,33 @@ const Index = () => {
             {[
               {
                 title: 'Local Support',
-                desc: 'Personalized service from your local marketing expert'
+                desc: 'Personalized service from your local marketing expert',
+                image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80'
               },
               {
                 title: 'Global Network',
-                desc: 'Access to worldwide resources and suppliers'
+                desc: 'Access to worldwide resources and suppliers',
+                image: 'https://images.unsplash.com/photo-1529119513315-c7c361862fc7?auto=format&fit=crop&q=80'
               },
               {
                 title: 'Quality Products',
-                desc: 'Premium materials and craftsmanship'
+                desc: 'Premium materials and craftsmanship',
+                image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80'
               },
               {
                 title: 'Marketing Expertise',
-                desc: 'Professional guidance for your brand'
+                desc: 'Professional guidance for your brand',
+                image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80'
               }
             ].map((item) => (
               <div key={item.title} className="text-center">
-                <div className="w-16 h-16 bg-fp-blue rounded-full mx-auto mb-4"></div>
+                <div className="w-16 h-16 rounded-full mx-auto mb-4 overflow-hidden">
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                 <p className="text-gray-600">{item.desc}</p>
               </div>
@@ -125,18 +149,23 @@ const Index = () => {
           <h2 className="text-3xl font-bold mb-8">Find Your Local Fully Promoted</h2>
           <p className="text-xl text-gray-600 mb-8">Over 300 locations worldwide ready to serve you</p>
           <Button className="bg-fp-blue text-white hover:bg-blue-700">
-            Find a Location
+            Search Locations Near You
           </Button>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="bg-fp-blue text-white py-16">
+      <section className="bg-fp-blue text-white py-16" 
+               style={{
+                 backgroundImage: 'linear-gradient(rgba(4, 97, 170, 0.9), rgba(4, 97, 170, 0.9)), url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80")',
+                 backgroundSize: 'cover',
+                 backgroundPosition: 'center'
+               }}>
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Promote Your Business?</h2>
           <p className="text-xl mb-8">Connect with your local Fully Promoted for a custom marketing solution</p>
           <Button className="bg-white text-fp-blue hover:bg-fp-gray">
-            Get Started Today
+            Contact Us Today
           </Button>
         </div>
       </section>
