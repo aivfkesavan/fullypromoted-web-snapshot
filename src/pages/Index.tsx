@@ -12,7 +12,7 @@ const Index = () => {
             <nav className="hidden md:flex space-x-8">
               <a href="#products" className="text-fp-dark hover:text-fp-blue">Products</a>
               <a href="#services" className="text-fp-dark hover:text-fp-blue">Services</a>
-              <a href="#about" className="text-fp-dark hover:text-fp-blue">About Us</a>
+              <a href="#about" className="text-fp-dark hover:text-fp-blue">Solutions</a>
               <a href="#locations" className="text-fp-dark hover:text-fp-blue">Locations</a>
             </nav>
           </div>
@@ -23,10 +23,10 @@ const Index = () => {
       <section className="bg-fp-blue text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Your One-Stop Solution for Business Promotion</h1>
-            <p className="text-xl mb-8">Branded products, marketing services, and promotional items to help your business succeed</p>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Your Brand Marketing Partner</h1>
+            <p className="text-xl mb-8">Full-service marketing solutions including branded products, promotional items, embroidery, screen printing, signs & banners, and digital marketing services</p>
             <Button className="bg-white text-fp-blue hover:bg-fp-gray text-lg px-8 py-6">
-              Get Started Today
+              Find a Location
             </Button>
           </div>
         </div>
@@ -35,13 +35,26 @@ const Index = () => {
       {/* Products Grid */}
       <section id="products" className="py-16 bg-fp-gray">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Popular Products</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Our Products & Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {['Apparel', 'Promotional Products', 'Signage'].map((item) => (
-              <div key={item} className="bg-white rounded-lg shadow-md p-6 text-center">
+            {[
+              {
+                title: 'Branded Apparel',
+                desc: 'Custom embroidery, screen printing, and branded clothing solutions'
+              },
+              {
+                title: 'Promotional Products',
+                desc: 'Wide selection of customizable promotional items and corporate gifts'
+              },
+              {
+                title: 'Signs & Graphics',
+                desc: 'Custom banners, business signs, vehicle wraps, and display solutions'
+              }
+            ].map((item) => (
+              <div key={item.title} className="bg-white rounded-lg shadow-md p-6 text-center">
                 <div className="h-40 bg-fp-gray rounded-md mb-4"></div>
-                <h3 className="text-xl font-semibold mb-2">{item}</h3>
-                <p className="text-gray-600 mb-4">Custom solutions for your business needs</p>
+                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                <p className="text-gray-600 mb-4">{item.desc}</p>
                 <Button variant="outline" className="text-fp-blue border-fp-blue hover:bg-fp-blue hover:text-white">
                   Learn More
                 </Button>
@@ -57,15 +70,49 @@ const Index = () => {
           <h2 className="text-3xl font-bold text-center mb-12">Why Choose Fully Promoted</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              'Global Network',
-              'Custom Solutions',
-              'Quality Products',
-              'Expert Service'
+              {
+                title: 'Local Support',
+                desc: 'Personalized service from your local marketing expert'
+              },
+              {
+                title: 'Global Network',
+                desc: 'Access to worldwide resources and suppliers'
+              },
+              {
+                title: 'Quality Products',
+                desc: 'Premium materials and craftsmanship'
+              },
+              {
+                title: 'Marketing Expertise',
+                desc: 'Professional guidance for your brand'
+              }
             ].map((item) => (
-              <div key={item} className="text-center">
+              <div key={item.title} className="text-center">
                 <div className="w-16 h-16 bg-fp-blue rounded-full mx-auto mb-4"></div>
-                <h3 className="text-xl font-semibold mb-2">{item}</h3>
-                <p className="text-gray-600">Supporting businesses worldwide</p>
+                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                <p className="text-gray-600">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-16 bg-fp-gray">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Complete Marketing Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              'Embroidery & Screen Printing',
+              'Digital Marketing',
+              'Graphic Design',
+              'Signs & Banners',
+              'Brand Strategy',
+              'Website Development'
+            ].map((service) => (
+              <div key={service} className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-semibold mb-2">{service}</h3>
+                <p className="text-gray-600">Professional solutions to grow your business</p>
               </div>
             ))}
           </div>
@@ -73,12 +120,12 @@ const Index = () => {
       </section>
 
       {/* Locations */}
-      <section id="locations" className="py-16 bg-fp-gray">
+      <section id="locations" className="py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-8">Find a Location Near You</h2>
-          <p className="text-xl text-gray-600 mb-8">With over 300 locations worldwide, we're here to serve you</p>
+          <h2 className="text-3xl font-bold mb-8">Find Your Local Fully Promoted</h2>
+          <p className="text-xl text-gray-600 mb-8">Over 300 locations worldwide ready to serve you</p>
           <Button className="bg-fp-blue text-white hover:bg-blue-700">
-            Search Locations
+            Find a Location
           </Button>
         </div>
       </section>
@@ -87,9 +134,9 @@ const Index = () => {
       <section className="bg-fp-blue text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Promote Your Business?</h2>
-          <p className="text-xl mb-8">Contact us today to get started with your custom promotion strategy</p>
+          <p className="text-xl mb-8">Connect with your local Fully Promoted for a custom marketing solution</p>
           <Button className="bg-white text-fp-blue hover:bg-fp-gray">
-            Contact Us Now
+            Get Started Today
           </Button>
         </div>
       </section>
@@ -100,15 +147,15 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <h3 className="text-xl font-bold mb-4">Fully Promoted</h3>
-              <p className="text-gray-400">Your global marketing services provider</p>
+              <p className="text-gray-400">Your Global Marketing Services Provider</p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Products</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>Apparel</li>
-                <li>Promotional Items</li>
-                <li>Signage</li>
-                <li>Print Services</li>
+                <li>Branded Apparel</li>
+                <li>Promotional Products</li>
+                <li>Signs & Banners</li>
+                <li>Marketing Materials</li>
               </ul>
             </div>
             <div>
@@ -117,16 +164,16 @@ const Index = () => {
                 <li>Embroidery</li>
                 <li>Screen Printing</li>
                 <li>Digital Marketing</li>
-                <li>Design Services</li>
+                <li>Brand Development</li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Connect</h4>
               <ul className="space-y-2 text-gray-400">
                 <li>Find a Location</li>
+                <li>Become an Owner</li>
+                <li>Support Center</li>
                 <li>Contact Us</li>
-                <li>Franchising</li>
-                <li>Careers</li>
               </ul>
             </div>
           </div>
