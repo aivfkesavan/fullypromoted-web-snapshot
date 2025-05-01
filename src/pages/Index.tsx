@@ -8,7 +8,13 @@ const Index = () => {
       <header className="bg-white shadow-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold text-fp-blue">Fully Promoted</div>
+            <div className="flex items-center">
+              <img 
+                src="/lovable-uploads/631ba9ad-1bc4-48ce-ae36-ac0d48904135.png" 
+                alt="Fully Promoted Logo" 
+                className="h-12 mr-2"
+              />
+            </div>
             <nav className="hidden md:flex space-x-8">
               <a href="#products" className="text-fp-dark hover:text-fp-blue">Products</a>
               <a href="#services" className="text-fp-dark hover:text-fp-blue">Services</a>
@@ -177,6 +183,11 @@ const Index = () => {
             <div>
               <h3 className="text-xl font-bold mb-4">Fully Promoted</h3>
               <p className="text-gray-400">Your Global Marketing Services Provider</p>
+              <img 
+                src="/lovable-uploads/631ba9ad-1bc4-48ce-ae36-ac0d48904135.png" 
+                alt="Fully Promoted Logo" 
+                className="h-12 mt-4"
+              />
             </div>
             <div>
               <h4 className="font-semibold mb-4">Products</h4>
