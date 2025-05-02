@@ -35,7 +35,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Your Brand Marketing Partner</h1>
-            <p className="text-xl mb-8">Full-service marketing solutions including branded products, promotional items, embroidery, screen printing, signs & banners, and digital marketing services</p>
+            <p className="text-xl mb-8">Full-service marketing solutions including branded products, promotional items, embroidery, screen printing, and digital marketing services</p>
             <Button className="bg-white text-fp-blue hover:bg-fp-gray text-lg px-8 py-6">
               Find a Location Near You
             </Button>
@@ -60,8 +60,8 @@ const Index = () => {
                 image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80'
               },
               {
-                title: 'Signs & Graphics',
-                desc: 'Custom banners, business signs, vehicle wraps, and display solutions',
+                title: 'Marketing Materials',
+                desc: 'Custom banners, business materials, and display solutions',
                 image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80'
               }
             ].map((item) => (
@@ -136,7 +136,7 @@ const Index = () => {
               'Embroidery & Screen Printing',
               'Digital Marketing',
               'Graphic Design',
-              'Signs & Banners',
+              'Marketing Materials',
               'Brand Strategy',
               'Website Development'
             ].map((service) => (
@@ -194,7 +194,6 @@ const Index = () => {
               <ul className="space-y-2 text-gray-400">
                 <li>Branded Apparel</li>
                 <li>Promotional Products</li>
-                <li>Signs & Banners</li>
                 <li>Marketing Materials</li>
               </ul>
             </div>
