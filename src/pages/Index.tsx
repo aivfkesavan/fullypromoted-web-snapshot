@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
@@ -34,7 +35,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Your Brand Marketing Partner</h1>
-            <p className="text-xl mb-8">Full-service marketing solutions including branded products, promotional items, embroidery, screen printing, and digital marketing services</p>
+            <p className="text-xl mb-8">Full-service marketing solutions including branded products, promotional items, embroidery, screen printing, signs & banners, and digital marketing services</p>
             <Button className="bg-white text-fp-blue hover:bg-fp-gray text-lg px-8 py-6">
               Find a Location Near You
             </Button>
@@ -46,7 +47,7 @@ const Index = () => {
       <section id="products" className="py-16 bg-fp-gray">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Our Products & Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 title: 'Branded Apparel',
@@ -57,6 +58,11 @@ const Index = () => {
                 title: 'Promotional Products',
                 desc: 'Wide selection of customizable promotional items and corporate gifts',
                 image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80'
+              },
+              {
+                title: 'Signs & Graphics',
+                desc: 'Custom banners, business signs, vehicle wraps, and display solutions',
+                image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80'
               }
             ].map((item) => (
               <div key={item.title} className="bg-white rounded-lg shadow-md p-6 text-center">
@@ -130,6 +136,7 @@ const Index = () => {
               'Embroidery & Screen Printing',
               'Digital Marketing',
               'Graphic Design',
+              'Signs & Banners',
               'Brand Strategy',
               'Website Development'
             ].map((service) => (
@@ -187,6 +194,7 @@ const Index = () => {
               <ul className="space-y-2 text-gray-400">
                 <li>Branded Apparel</li>
                 <li>Promotional Products</li>
+                <li>Signs & Banners</li>
                 <li>Marketing Materials</li>
               </ul>
             </div>
@@ -205,7 +213,7 @@ const Index = () => {
                 <li>Find a Location</li>
                 <li>Become an Owner</li>
                 <li>Support Center</li>
-                <li>Contact</li>
+                <li>Contact Us</li>
               </ul>
             </div>
           </div>
